@@ -59,7 +59,7 @@ public class HoldToGrabCube : MonoBehaviour
             maxDistance,
             interactableLayer))
         {
-            Rigidbody rb = hit.collider.GetComponent<Rigidbody>();
+            Rigidbody rb = hit.rigidbody;
 
             if (rb == null)
                 return;
