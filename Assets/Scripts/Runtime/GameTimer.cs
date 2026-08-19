@@ -13,6 +13,9 @@ public class GameTimer : MonoBehaviour
     private bool iniciado = false;
     private bool finalizado = false;
 
+    public float TiempoTranscurrido => tiempoActual;
+    public bool Finalizado => finalizado;
+
     private void Start()
     {
         ActualizarTexto(0f);

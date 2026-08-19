@@ -309,7 +309,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 110
     m_Alignment: 1
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -459,6 +459,7 @@ GameObject:
   - component: {fileID: 620275411}
   - component: {fileID: 620275410}
   - component: {fileID: 620275409}
+  - component: {fileID: 620275414}
   m_Layer: 0
   m_Name: Canvas
   m_TagString: Untagged
@@ -568,6 +569,60 @@ RectTransform:
   m_AnchoredPosition: {x: 0, y: 0}
   m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0, y: 0}
+--- !u!114 &620275414
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 620275408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a5b3d26560f5624469eb43ac6df4677e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Guia3.OrientationLayout
+  scaler: {fileID: 620275411}
+  playerCamera: {fileID: 0}
+  portraitReference: {x: 1080, y: 1920}
+  landscapeReference: {x: 1920, y: 1080}
+  portraitFov: 75
+  landscapeFov: 52
+  elements:
+  - target: {fileID: 345554484}
+    portraitAnchor: {x: 0.5, y: 1}
+    portraitOffset: {x: 0, y: -320}
+    portraitSize: {x: 960, y: 160}
+    landscapeAnchor: {x: 0.5, y: 1}
+    landscapeOffset: {x: 0, y: -140}
+    landscapeSize: {x: 1400, y: 150}
+  - target: {fileID: 1334241791}
+    portraitAnchor: {x: 0.5, y: 1}
+    portraitOffset: {x: 0, y: -470}
+    portraitSize: {x: 960, y: 120}
+    landscapeAnchor: {x: 0.5, y: 1}
+    landscapeOffset: {x: 0, y: -280}
+    landscapeSize: {x: 1400, y: 100}
+  - target: {fileID: 513321898}
+    portraitAnchor: {x: 0.5, y: 0.5}
+    portraitOffset: {x: 0, y: 90}
+    portraitSize: {x: 660, y: 160}
+    landscapeAnchor: {x: 0.5, y: 0.5}
+    landscapeOffset: {x: 0, y: 30}
+    landscapeSize: {x: 660, y: 160}
+  - target: {fileID: 1741080575}
+    portraitAnchor: {x: 0.5, y: 0.5}
+    portraitOffset: {x: 0, y: -110}
+    portraitSize: {x: 660, y: 160}
+    landscapeAnchor: {x: 0.5, y: 0.5}
+    landscapeOffset: {x: 0, y: -150}
+    landscapeSize: {x: 660, y: 160}
+  - target: {fileID: 773831058}
+    portraitAnchor: {x: 0.5, y: 0}
+    portraitOffset: {x: 0, y: 180}
+    portraitSize: {x: 940, y: 120}
+    landscapeAnchor: {x: 0.5, y: 0}
+    landscapeOffset: {x: 0, y: 90}
+    landscapeSize: {x: 1400, y: 90}
 --- !u!1 &773831057
 GameObject:
   m_ObjectHideFlags: 0
@@ -789,7 +844,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
@@ -1273,7 +1328,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 54
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1

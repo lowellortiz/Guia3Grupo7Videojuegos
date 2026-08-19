@@ -13,6 +13,12 @@ public class ErrorCounter : MonoBehaviour
     private int erroresCaida = 0;
     private int solicitudesAyuda = 0;
 
+    public int TotalErrores => totalErrores;
+    public int ErroresAgarre => erroresAgarre;
+    public int ErroresSoltado => erroresSoltado;
+    public int ErroresCaida => erroresCaida;
+    public int SolicitudesAyuda => solicitudesAyuda;
+
     private void Start()
     {
         ActualizarTexto();

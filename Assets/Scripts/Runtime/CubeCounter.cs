@@ -12,6 +12,11 @@ public class CubeCounter : MonoBehaviour
 
     private HashSet<GameObject> cubosCorrectos = new HashSet<GameObject>();
 
+    /// <summary>Se dispara cuando los 4 cubos quedan apilados. Lo escucha AttemptController.</summary>
+    public event System.Action Completado;
+
+    public int Cubos => cubosCorrectos.Count;
+
     private void Start()
     {
         ActualizarTexto();
@@ -35,6 +40,8 @@ public class CubeCounter : MonoBehaviour
 
                 if (gameTimer != null)
                     gameTimer.FinalizarCronometro();
+
+                Completado?.Invoke();
             }
         }
     }
