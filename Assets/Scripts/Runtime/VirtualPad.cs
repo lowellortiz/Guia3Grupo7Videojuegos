@@ -1,6 +1,6 @@
 using UnityEngine;
 using UnityEngine.InputSystem;
-using UnityEngine.UI; // Agregamos esta línea arriba
+using UnityEngine.UI;
 
 public class VirtualPad : MonoBehaviour
 {
@@ -8,7 +8,6 @@ public class VirtualPad : MonoBehaviour
     [SerializeField] private float moveSpeed = 5f;
 
     [Header("Referencias UI")]
-    // Cambiamos 'TMP_Text' por 'Text' si estás usando el texto tradicional de Unity
     [SerializeField] private Text moveVectorText; 
     [SerializeField] private Text normalizedDirText;
 
@@ -16,7 +15,7 @@ public class VirtualPad : MonoBehaviour
 
     private void OnEnable()
     {
-        // Solución al error de ambigüedad usando el namespace explícito de InputSystem
+        // Habilitar sensores físicos si son necesarios
         if (UnityEngine.InputSystem.Accelerometer.current != null)
             InputSystem.EnableDevice(UnityEngine.InputSystem.Accelerometer.current);
 
@@ -24,7 +23,7 @@ public class VirtualPad : MonoBehaviour
             InputSystem.EnableDevice(UnityEngine.InputSystem.Gyroscope.current);
     }
 
-    // Este método se vincula automáticamente al PlayerInput (Evento "Move")
+    // Este método es llamado por el componente 'Player Input' (Behavior: Send Messages)
     public void OnMove(InputValue value)
     {
         moveInput = value.Get<Vector2>();
@@ -32,11 +31,11 @@ public class VirtualPad : MonoBehaviour
 
     private void Update()
     {
-        // 1. Mover el objeto en los ejes X y Z (plano 3D)
+        // 1. Mover el objeto en el plano XZ
         Vector3 movement = new Vector3(moveInput.x, 0f, moveInput.y);
         transform.Translate(movement * moveSpeed * Time.deltaTime, Space.World);
 
-        // 2. Actualizar la interfaz de usuario
+        // 2. Refrescar textos en UI
         UpdateUI();
     }
 

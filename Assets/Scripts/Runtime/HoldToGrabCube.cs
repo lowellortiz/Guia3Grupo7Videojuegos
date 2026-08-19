@@ -17,18 +17,22 @@ public class HoldToGrabCube : MonoBehaviour
 
     private void OnEnable()
     {
-        grabAction.action.Enable();
-
-        grabAction.action.performed += OnGrabPressed;
-        grabAction.action.canceled += OnGrabReleased;
+        if (grabAction != null && grabAction.action != null)
+        {
+            grabAction.action.Enable();
+            grabAction.action.performed += OnGrabPressed;
+            grabAction.action.canceled += OnGrabReleased;
+        }
     }
 
     private void OnDisable()
     {
-        grabAction.action.performed -= OnGrabPressed;
-        grabAction.action.canceled -= OnGrabReleased;
-
-        grabAction.action.Disable();
+        if (grabAction != null && grabAction.action != null)
+        {
+            grabAction.action.performed -= OnGrabPressed;
+            grabAction.action.canceled -= OnGrabReleased;
+            grabAction.action.Disable();
+        }
     }
 
     private void OnGrabPressed(InputAction.CallbackContext context)
@@ -59,7 +63,8 @@ public class HoldToGrabCube : MonoBehaviour
             maxDistance,
             interactableLayer))
         {
-            Rigidbody rb = hit.rigidbody;
+            // Busca el Rigidbody en el objeto impactado O en cualquiera de sus padres
+            Rigidbody rb = hit.collider.GetComponentInParent<Rigidbody>();
 
             if (rb == null)
                 return;
@@ -77,6 +82,8 @@ public class HoldToGrabCube : MonoBehaviour
 
     private void ReleaseObject()
     {
+        if (grabbedObject == null) return;
+
         grabbedObject.isKinematic = false;
         grabbedObject.useGravity = true;
 
@@ -86,7 +93,7 @@ public class HoldToGrabCube : MonoBehaviour
 
     private void Update()
     {
-        if (grabbedObject != null)
+        if (grabbedObject != null && holdPoint != null)
         {
             grabbedObject.transform.position = holdPoint.position;
             grabbedObject.transform.rotation = holdPoint.rotation;
