@@ -2145,38 +2145,38 @@ MonoBehaviour:
   elements:
   - target: {fileID: 495048472}
     portraitAnchor: {x: 0.5, y: 1}
-    portraitOffset: {x: 0, y: -110}
+    portraitOffset: {x: 0, y: -190}
     portraitSize: {x: 700, y: 110}
     landscapeAnchor: {x: 0.5, y: 1}
-    landscapeOffset: {x: 0, y: -70}
+    landscapeOffset: {x: 0, y: -115}
     landscapeSize: {x: 700, y: 110}
   - target: {fileID: 1952809264}
     portraitAnchor: {x: 0, y: 1}
-    portraitOffset: {x: 300, y: -215}
+    portraitOffset: {x: 300, y: -295}
     portraitSize: {x: 540, y: 60}
     landscapeAnchor: {x: 0, y: 1}
-    landscapeOffset: {x: 320, y: -70}
+    landscapeOffset: {x: 320, y: -190}
     landscapeSize: {x: 520, y: 60}
   - target: {fileID: 579940968}
     portraitAnchor: {x: 1, y: 1}
-    portraitOffset: {x: -190, y: -215}
+    portraitOffset: {x: -190, y: -295}
     portraitSize: {x: 340, y: 60}
     landscapeAnchor: {x: 1, y: 1}
-    landscapeOffset: {x: -220, y: -70}
+    landscapeOffset: {x: -220, y: -190}
     landscapeSize: {x: 380, y: 60}
   - target: {fileID: 780447536}
     portraitAnchor: {x: 0, y: 0}
     portraitOffset: {x: 240, y: 300}
     portraitSize: {x: 300, y: 300}
     landscapeAnchor: {x: 0, y: 0}
-    landscapeOffset: {x: 260, y: 220}
+    landscapeOffset: {x: 260, y: 200}
     landscapeSize: {x: 300, y: 300}
   - target: {fileID: 634289568}
     portraitAnchor: {x: 1, y: 0}
     portraitOffset: {x: -240, y: 300}
     portraitSize: {x: 260, y: 260}
     landscapeAnchor: {x: 1, y: 0}
-    landscapeOffset: {x: -260, y: 220}
+    landscapeOffset: {x: -260, y: 200}
     landscapeSize: {x: 260, y: 260}
   - target: {fileID: 1600954822}
     portraitAnchor: {x: 0.5, y: 0.5}
@@ -3683,7 +3683,7 @@ MonoBehaviour:
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 10
-    m_MaxSize: 40
+    m_MaxSize: 50
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
